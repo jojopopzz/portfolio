@@ -17,53 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => setNavOpen(false));
   });
 
-  // Lightbox
+  // Lightbox (only on pages that have one)
   const lightbox = document.querySelector('.lightbox');
-  const lightboxContent = lightbox.querySelector('.lightbox-content');
 
-  const closeLightbox = () => {
-    lightbox.hidden = true;
-    lightboxContent.innerHTML = '';
-    document.body.style.overflow = '';
-  };
+  if (lightbox) {
+    const lightboxContent = lightbox.querySelector('.lightbox-content');
 
-  document.querySelectorAll('.media:not(.media--hero)').forEach((media) => {
-    media.addEventListener('click', () => {
-      lightboxContent.appendChild(media.firstElementChild.cloneNode(true));
-      lightbox.hidden = false;
-      document.body.style.overflow = 'hidden';
-    });
-  });
+    const closeLightbox = () => {
+      lightbox.hidden = true;
+      lightboxContent.innerHTML = '';
+      document.body.style.overflow = '';
+    };
 
-  lightbox.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
-  });
-
-  // Work page filters
-  const filters = document.querySelectorAll('.filter');
-  const projects = document.querySelectorAll('.project[data-category]');
-
-  filters.forEach((button) => {
-    button.addEventListener('click', () => {
-      const category = button.dataset.filter;
-
-      filters.forEach((other) => {
-        const active = other === button;
-        other.classList.toggle('is-active', active);
-        other.setAttribute('aria-pressed', active);
-      });
-
-      projects.forEach((project) => {
-        const show = category === 'all' || project.dataset.category === category;
-        project.classList.toggle('is-hidden', !show);
-        if (show) project.classList.add('is-visible');
+    document.querySelectorAll('.media:not(.media--hero)').forEach((media) => {
+      media.addEventListener('click', () => {
+        lightboxContent.appendChild(media.firstElementChild.cloneNode(true));
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
       });
     });
-  });
+
+    lightbox.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
+  }
 
   // Fade content in as it scrolls into view
-  const revealItems = document.querySelectorAll('.project, .service, .intro, .contact, .cta');
+  const revealItems = document.querySelectorAll('.project, .service, .intro, .contact');
   revealItems.forEach((item) => item.classList.add('reveal'));
 
   const observer = new IntersectionObserver((entries) => {

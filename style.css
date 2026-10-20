@@ -99,11 +99,6 @@ main > section {
   line-height: 1.5;
 }
 
-.text-link {
-  font-size: 0.875rem;
-  border-bottom: 1px solid var(--line);
-}
-
 /* Media */
 
 .media {
@@ -184,12 +179,6 @@ main > section {
   color: var(--muted);
 }
 
-.featured-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
 /* Work grid */
 
 .grid {
@@ -207,10 +196,6 @@ main > section {
   aspect-ratio: 16 / 9;
 }
 
-.project.is-hidden {
-  display: none;
-}
-
 figcaption {
   display: flex;
   justify-content: space-between;
@@ -222,52 +207,20 @@ figcaption span:last-child {
   color: var(--muted);
 }
 
-/* Work page */
+/* Contact */
 
-.page-intro {
+.contact-page {
+  min-height: 60vh;
   padding-top: var(--space);
 }
 
-.page-intro h1 {
+.contact-page h1 {
+  margin-bottom: 1.5rem;
   font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
 }
-
-.page-intro .lead {
-  color: var(--muted);
-}
-
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.filter {
-  background: none;
-  border: 0;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 0.15rem;
-  font: inherit;
-  font-size: 0.9375rem;
-  color: var(--muted);
-  cursor: pointer;
-}
-
-.filter:hover,
-.filter.is-active {
-  color: var(--text);
-}
-
-.filter.is-active {
-  border-bottom-color: var(--text);
-}
-
-/* Contact */
 
 .contact-lead {
   max-width: 28rem;

@@ -11,21 +11,20 @@
   <!--
     WORK SPLIT — HOME PAGE
     Hakim:  Header & navigation, Hero, Footer, Lightbox, images folder
-    Stella: About, What I photograph (services), Contact / Get in touch
-    Josef:  Selected work, plus the whole Our work page (work.html)
+    Stella: About, What I photograph (services), plus the Contact page (contact.html)
+    Josef:  Selected work
 
     Only edit the sections marked with your name. If you need to change
     someone else's section, ask them first so we avoid merge conflicts.
   -->
 
-  <!-- ===== START: Header & navigation (Hakim) — shared with work.html, keep both in sync ===== -->
+  <!-- ===== START: Header & navigation (Hakim) — shared with contact.html, keep both in sync ===== -->
   <header class="site-header">
     <a class="logo" href="index.html">Elias Berg</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="work.html">Our work</a>
-      <a href="#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
   <!-- ===== END: Header & navigation (Hakim) ===== -->
@@ -33,8 +32,9 @@
   <main>
     <!-- ===== START: Hero — main photo and headline about Elias's food photography (Hakim) ===== -->
     <section class="hero">
-      <!-- Replace with <img src="images/hero.jpg" alt="..."> -->
-      <div class="media media--hero"><div class="placeholder"></div></div>
+      <div class="media media--hero">
+        <img src="images/hero.jpg" alt="Friends laughing and eating together at a crowded table in a busy, dimly lit restaurant">
+      </div>
       <div class="hero-text">
         <h1>Food photography for restaurants, cafés and food events.</h1>
       </div>
@@ -55,17 +55,23 @@
       <h2 class="section-label">What I photograph</h2>
       <div class="services-grid">
         <article class="service">
-          <div class="media"><div class="placeholder"></div></div>
+          <div class="media">
+            <img src="images/restaurant.jpg" alt="A smiling guest serving food at a busy table in a warmly lit restaurant with framed paintings on the walls">
+          </div>
           <h3>Restaurants</h3>
           <p>Dishes, dining rooms and the team behind the pass, photographed to show the character of your restaurant. Images for your website, menus, booking pages and press.</p>
         </article>
         <article class="service">
-          <div class="media"><div class="placeholder"></div></div>
+          <div class="media">
+            <img src="images/cafe.jpg" alt="Guests at tables in front of a warmly lit counter with a brass tap and a neon open sign at night">
+          </div>
           <h3>Cafés</h3>
           <p>Coffee, freshly baked goods and the calm of an ordinary morning. Honest, inviting images that feel like your café, for your website and social media.</p>
         </article>
         <article class="service">
-          <div class="media"><div class="placeholder"></div></div>
+          <div class="media">
+            <img src="images/events.jpg" alt="A crowded outdoor dining scene at dusk, with people sharing plates at long tables under string lights">
+          </div>
           <h3>Food events</h3>
           <p>Markets, launches, tastings and pop-ups, documented from setup to the last plate, so you have images to share both during and after the event.</p>
         </article>
@@ -73,40 +79,34 @@
     </section>
     <!-- ===== END: What I photograph (Stella) ===== -->
 
-    <!-- ===== START: Selected work — three featured photos of Elias's work, links to work.html (Josef) ===== -->
+    <!-- ===== START: Selected work — three featured photos of Elias's work (Josef) ===== -->
     <section class="featured">
-      <div class="featured-head">
-        <h2 class="section-label">Selected work</h2>
-        <a class="text-link" href="work.html">See all work &rarr;</a>
-      </div>
+      <h2 class="section-label">Selected work</h2>
       <div class="grid">
         <figure class="project project--wide">
-          <div class="media"><div class="placeholder"></div></div>
-          <figcaption><span>Restaurant name</span><span>Restaurant</span></figcaption>
+          <div class="media">
+            <img src="images/django-opening.jpg" alt="Guests and baristas in a sunlit, busy space, one man smiling at his phone by the espresso bar">
+          </div>
+          <figcaption><span>Django opening</span><span>Restaurant</span></figcaption>
         </figure>
         <figure class="project">
-          <div class="media"><div class="placeholder"></div></div>
-          <figcaption><span>Café name</span><span>Café</span></figcaption>
+          <div class="media">
+            <img src="images/unchained.jpg" alt="A latte on a marble table beside a leather sofa in a sunlit café, with the street visible through the window">
+          </div>
+          <figcaption><span>Unchained</span><span>Café</span></figcaption>
         </figure>
         <figure class="project">
-          <div class="media"><div class="placeholder"></div></div>
-          <figcaption><span>Event name</span><span>Event</span></figcaption>
+          <div class="media">
+            <img src="images/wasps-and-bees.jpg" alt="Guests with drinks gathered around a DJ booth with turntables and bottles at an evening event">
+          </div>
+          <figcaption><span>wasps&amp;bees</span><span>Event</span></figcaption>
         </figure>
       </div>
     </section>
     <!-- ===== END: Selected work (Josef) ===== -->
-
-    <!-- ===== START: Contact / Get in touch — email and Instagram (Stella) ===== -->
-    <section id="contact" class="contact">
-      <h2 class="section-label">Contact</h2>
-      <p class="contact-lead">Planning a new menu, opening or event? Get in touch.</p>
-      <p class="contact-link"><a href="mailto:hello@example.com">hello@example.com</a></p>
-      <p class="contact-link"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></p>
-    </section>
-    <!-- ===== END: Contact / Get in touch (Stella) ===== -->
   </main>
 
-  <!-- ===== START: Footer (Hakim) — shared with work.html, keep both in sync ===== -->
+  <!-- ===== START: Footer (Hakim) — shared with contact.html, keep both in sync ===== -->
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> Elias Berg</p>
   </footer>

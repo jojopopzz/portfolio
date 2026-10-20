@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!--
+    WORK SPLIT — OUR WORK PAGE
+    Josef:  Page intro, Filters, Gallery, Call to action
+    Hakim:  Header & navigation, Footer, Lightbox (shared with index.html)
+    Stella: Home page sections (index.html)
+
+    Only edit the sections marked with your name. If you need to change
+    someone else's section, ask them first so we avoid merge conflicts.
+  -->
+
+  <!-- ===== START: Header & navigation (Hakim) — shared with index.html, keep both in sync ===== -->
   <header class="site-header">
     <a class="logo" href="index.html">Elias Berg</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -17,13 +28,17 @@
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
+  <!-- ===== END: Header & navigation (Hakim) ===== -->
 
   <main>
+    <!-- ===== START: Page intro — "Our work" title and description (Josef) ===== -->
     <section class="page-intro">
       <h1>Our work</h1>
       <p class="lead">A selection of photographs for restaurants, cafés and food events.</p>
     </section>
+    <!-- ===== END: Page intro (Josef) ===== -->
 
+    <!-- ===== START: Gallery of Elias's work, with category filters (Josef) ===== -->
     <section class="work">
       <div class="filters" role="group" aria-label="Filter work">
         <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
@@ -73,21 +88,28 @@
         </figure>
       </div>
     </section>
+    <!-- ===== END: Gallery (Josef) ===== -->
 
+    <!-- ===== START: Call to action — link to contact (Josef) ===== -->
     <section class="cta">
       <p class="contact-lead">Want photographs like these for your restaurant, café or event?</p>
       <p class="contact-link"><a href="index.html#contact">Get in touch &rarr;</a></p>
     </section>
+    <!-- ===== END: Call to action (Josef) ===== -->
   </main>
 
+  <!-- ===== START: Footer (Hakim) — shared with index.html, keep both in sync ===== -->
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> Elias Berg</p>
   </footer>
+  <!-- ===== END: Footer (Hakim) ===== -->
 
+  <!-- ===== START: Lightbox — full-screen photo viewer (Hakim) ===== -->
   <div class="lightbox" hidden>
     <button class="lightbox-close" aria-label="Close">Close</button>
     <div class="lightbox-content"></div>
   </div>
+  <!-- ===== END: Lightbox (Hakim) ===== -->
 
   <script src="script.js"></script>
 </body>

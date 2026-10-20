@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!--
+    WORK SPLIT — HOME PAGE
+    Hakim:  Header & navigation, Hero, Contact, Footer, Lightbox
+    Stella: About, What I photograph (services), Selected work
+    Josef:  Our work page (work.html)
+
+    Only edit the sections marked with your name. If you need to change
+    someone else's section, ask them first so we avoid merge conflicts.
+  -->
+
+  <!-- ===== START: Header & navigation (Hakim) — shared with work.html, keep both in sync ===== -->
   <header class="site-header">
     <a class="logo" href="index.html">Elias Berg</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -17,8 +28,10 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
+  <!-- ===== END: Header & navigation (Hakim) ===== -->
 
   <main>
+    <!-- ===== START: Hero — main photo and headline about Elias's food photography (Hakim) ===== -->
     <section class="hero">
       <!-- Replace with <img src="images/hero.jpg" alt="..."> -->
       <div class="media media--hero"><div class="placeholder"></div></div>
@@ -26,14 +39,18 @@
         <h1>Food photography for restaurants, cafés and food events.</h1>
       </div>
     </section>
+    <!-- ===== END: Hero (Hakim) ===== -->
 
+    <!-- ===== START: About — short introduction to Elias (Stella) ===== -->
     <section class="intro">
       <h2 class="section-label">About</h2>
       <div class="intro-body">
         <p class="lead">I'm Elias Berg, a photographer who works with kitchens, cafés and the people behind them. I photograph the food, the space and the atmosphere, so guests know what to expect before they walk in.</p>
       </div>
     </section>
+    <!-- ===== END: About (Stella) ===== -->
 
+    <!-- ===== START: What I photograph — restaurants, cafés and food events (Stella) ===== -->
     <section class="services">
       <h2 class="section-label">What I photograph</h2>
       <div class="services-grid">
@@ -54,7 +71,9 @@
         </article>
       </div>
     </section>
+    <!-- ===== END: What I photograph (Stella) ===== -->
 
+    <!-- ===== START: Selected work — three featured photos of Elias's work (Stella) ===== -->
     <section class="featured">
       <div class="featured-head">
         <h2 class="section-label">Selected work</h2>
@@ -75,23 +94,30 @@
         </figure>
       </div>
     </section>
+    <!-- ===== END: Selected work (Stella) ===== -->
 
+    <!-- ===== START: Contact — email and Instagram (Hakim) ===== -->
     <section id="contact" class="contact">
       <h2 class="section-label">Contact</h2>
       <p class="contact-lead">Planning a new menu, opening or event? Get in touch.</p>
       <p class="contact-link"><a href="mailto:hello@example.com">hello@example.com</a></p>
       <p class="contact-link"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></p>
     </section>
+    <!-- ===== END: Contact (Hakim) ===== -->
   </main>
 
+  <!-- ===== START: Footer (Hakim) — shared with work.html, keep both in sync ===== -->
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> Elias Berg</p>
   </footer>
+  <!-- ===== END: Footer (Hakim) ===== -->
 
+  <!-- ===== START: Lightbox — full-screen photo viewer (Hakim) ===== -->
   <div class="lightbox" hidden>
     <button class="lightbox-close" aria-label="Close">Close</button>
     <div class="lightbox-content"></div>
   </div>
+  <!-- ===== END: Lightbox (Hakim) ===== -->
 
   <script src="script.js"></script>
 </body>
